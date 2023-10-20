@@ -1,0 +1,63 @@
+.customSelect select {
+  display: none;
+}
+
+.customSelect {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 115px 9px 20px;
+  border-radius: 28px;
+  border: 2px solid #000aff;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 125%;
+  cursor: pointer;
+}
+
+.selectSelected:after {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 12px;
+  top: 12px;
+  right: 13px;
+  border: 6px solid transparent;
+  background: url(../../public/select-arrow.svg) no-repeat;
+}
+
+.selectSelected .selectArrowActive::after {
+  top: 14px;
+  transform: scaleY(-1);
+}
+
+.selectItems div,
+.selectSelected {
+  cursor: pointer;
+  user-select: none;
+}
+
+.selectItems div {
+  margin-bottom: 16px;
+}
+
+.selectItems {
+  padding: 16px 0 0 20px;
+  border: 2px solid #000aff;
+  border-radius: 28px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.selectItems div:hover,
+.sameAsSelected {
+  color: #000aff;
+}
+
+.selectHide {
+  display: none;
+}
