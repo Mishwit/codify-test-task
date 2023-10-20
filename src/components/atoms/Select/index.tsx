@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import clsx from "clsx";
 import styles from "./styles.module.css";
 
 type Props = {
@@ -17,7 +18,9 @@ export const Select: React.FC<Props> = ({ options, activeOption }) => {
       >
         <span className={styles.selectSelected}>{activeOption}</span>
         {/* <img src="./select-arrow.svg" alt="" /> */}
-        <div className={styles.arrow} />
+        <div
+          className={clsx(styles.arrow, isSelectOpen && styles.arrowOpened)}
+        />
       </div>
       {isSelectOpen && (
         <div className={styles.selectItems}>
