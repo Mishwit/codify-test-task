@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import clsx from "clsx";
 import styles from "./styles.module.css";
+import Image from "next/image";
 
 type Props = {
   options: string[];
@@ -10,6 +11,13 @@ type Props = {
 
 export const Select: React.FC<Props> = ({ options, activeOption }) => {
   const [isSelectOpen, setIsSelectOpen] = useState(false);
+  // options = [
+  //   "За последний месяц",
+  //   "За последние 6 месяцев",
+  //   "За последний год",
+  // ];
+
+  // activeOption = "За последний месяц";
   return (
     <div className={styles.selectWrapper}>
       <div
@@ -17,11 +25,16 @@ export const Select: React.FC<Props> = ({ options, activeOption }) => {
         onClick={() => setIsSelectOpen(!isSelectOpen)}
       >
         <span className={styles.selectSelected}>{activeOption}</span>
-        {/* <img src="./select-arrow.svg" alt="" /> */}
-        <div
+
+        <Image
           className={clsx(styles.arrow, isSelectOpen && styles.arrowOpened)}
+          src="/select-arrow.svg"
+          alt=""
+          height={12}
+          width={24}
         />
       </div>
+
       {isSelectOpen && (
         <div className={styles.selectItems}>
           {options.map((option) => (
@@ -30,42 +43,5 @@ export const Select: React.FC<Props> = ({ options, activeOption }) => {
         </div>
       )}
     </div>
-    // <div
-    //   className={styles.customSelect}
-    //   onClick={() => setIsSelectOpen(!isSelectOpen)}
-    // >
-    //   <select>
-    //     <option value="lastMonth">За последний месяц</option>
-    //     <option value="lastSixMonth">За последние 6 месяцев</option>
-    //     <option value="lastYear">За последний год </option>
-    //   </select>
-    //   <div className={styles.selectSelected}>За последний месяц</div>
-    //   <div className={`selectItems ${isSelectOpen ? "" : "selectHide"}`}>
-    //     <div>За последний год </div>
-    //     <div>За последние 6 месяцев</div>
-    //   </div>
-    // </div>
   );
 };
-// export const Select = () => {
-//   const options = [
-//     "За последний месяц",
-//     "За последние 6 месяцев",
-//     "За последний год",
-//   ];
-//   const [selectedOption, setSelectedOption] = useState(options);
-//   const selectChange = (event) => {
-//     setSelectedOption(event.target.value);
-//   };
-//   return (
-//     <div>
-//       <select className="select" value={selectedOption} onChange={selectChange}>
-//         {options.map((option, index) => (
-//           <option key={index} value={option}>
-//             {option}
-//           </option>
-//         ))}
-//       </select>
-//     </div>
-//   );
-// };
