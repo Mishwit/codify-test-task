@@ -11,13 +11,13 @@ type Props = {
 
 export const Select: React.FC<Props> = ({ options, activeOption }) => {
   const [isSelectOpen, setIsSelectOpen] = useState(false);
-  // options = [
-  //   "За последний месяц",
-  //   "За последние 6 месяцев",
-  //   "За последний год",
-  // ];
+  options = [
+    "За последний месяц",
+    "За последние 6 месяцев",
+    "За последний год",
+  ];
 
-  // activeOption = "За последний месяц";
+  activeOption = "За последний месяц";
   return (
     <div className={styles.selectWrapper}>
       <div
