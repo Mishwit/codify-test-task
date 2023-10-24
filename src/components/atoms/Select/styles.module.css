@@ -1,5 +1,9 @@
+* {
+  font-family: "Manrope", sans-serif;
+}
+
 .selectWrapper {
-  width: 500px;
+  width: 380px;
 }
 
 .customSelect select {
@@ -10,7 +14,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 9px 20px 9px 20px;
+  padding: 9px 12px 9px 20px;
   border-radius: 28px;
   border: 2px solid #000aff;
   font-size: 24px;
@@ -46,7 +50,8 @@
 .selectItems {
   display: flex;
   flex-direction: column;
-  padding: 16px 0 0 20px;
+  gap: 14px;
+  padding: 16px 0 16px 20px;
   border: 2px solid #000aff;
   border-radius: 28px;
   font-size: 24px;
