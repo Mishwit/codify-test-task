@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.css";
+import clsx from "clsx";
 
 import utils from "../.../../.../../../../utils/data.json";
 
 type Props = {
-  amount: [];
+  amount: number[];
 };
 
 export const Chart: React.FC<Props> = ({ amount }) => {
@@ -16,10 +17,11 @@ export const Chart: React.FC<Props> = ({ amount }) => {
           <span key={amount}>{amount}</span>
         ))}
       </div>
+
       <div className={styles.chartGraph}>
         <div className={styles.chartDays}>
           <div className={styles.chartStripes}>
-            <div className={styles.stripe}></div>
+            <div className={clsx(styles.stripe)}></div>
             <div className={styles.stripe}></div>
             <div className={styles.stripe}></div>
             <div className={styles.stripe}></div>
@@ -52,8 +54,8 @@ export const Chart: React.FC<Props> = ({ amount }) => {
           </div>
 
           <div className={styles.days}>
-            <span>1</span>
-            <span>5</span>
+            <span>01</span>
+            <span>05</span>
             <span>10</span>
             <span>15</span>
             <span>20</span>
