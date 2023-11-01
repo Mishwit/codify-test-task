@@ -1,9 +1,7 @@
-* {
-  font-family: "Manrope", sans-serif;
-}
-
 .selectWrapper {
+  position: relative;
   width: 380px;
+  font-family: "Manrope";
 }
 
 .customSelect select {
@@ -11,9 +9,12 @@
 }
 
 .customSelect {
+  position: relative;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: none;
   padding: 9px 12px 9px 20px;
   border-radius: 28px;
   border: 2px solid #000aff;
@@ -43,28 +44,33 @@
   transform: scaleY(-1);
 }
 
-.selectItems div {
+.selectItems ul {
   margin-bottom: 16px;
 }
 
 .selectItems {
+  position: absolute;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   gap: 14px;
-  padding: 16px 0 16px 20px;
+  padding: 16px 12px 16px 20px;
+  margin: 0;
   border: 2px solid #000aff;
   border-radius: 28px;
   font-size: 24px;
   font-weight: 400;
   line-height: 125%;
   cursor: pointer;
+  list-style-type: none;
 }
 
-.selectItems span {
+.selectItems li {
   transition: 0.3s;
 }
 
-.selectItems span:hover {
+.selectItems li:hover {
   color: #000aff;
 }
 
@@ -73,5 +79,5 @@
 }
 
 .arrowOpened {
-  transform: scaleY(-1);
+  transform: rotate(180deg);
 }

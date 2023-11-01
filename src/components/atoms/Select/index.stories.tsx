@@ -21,7 +21,7 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary: Story = {
   args: {
-    activeOption: "За последний месяц",
+    defaultOption: "За последний месяц",
     options: [
       "За последний месяц",
       "За последние 6 месяцев",

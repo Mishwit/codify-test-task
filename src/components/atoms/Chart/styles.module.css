@@ -1,0 +1,46 @@
+.chartWrapper {
+  display: flex;
+  width: 995px;
+  height: 400px;
+  padding: 40px;
+  flex-shrink: 0;
+  border-radius: 27px;
+  background: rgba(255, 0, 245, 0.05);
+  font-size: 20px;
+}
+
+.chartAmount {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+.chartGraph {
+  display: flex;
+  align-items: flex-end;
+}
+
+.chartStripes {
+  display: flex;
+  gap: 11px;
+}
+
+.chartDays {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  gap: 17px;
+}
+
+.stripe {
+  background-color: #000aff;
+  height: 1px;
+  width: 16px;
+}
+
+.days {
+  display: flex;
+  gap: 111px;
+}
