@@ -9,7 +9,6 @@ type Props = {
 };
 
 export const Chart: React.FC<Props> = ({ amount }) => {
-  const utils = [];
   return (
     <div className={styles.chartWrapper}>
       <div className={styles.chartAmount}>
@@ -20,7 +19,7 @@ export const Chart: React.FC<Props> = ({ amount }) => {
 
       <div className={styles.chartGraph}>
         <div className={styles.chartDays}>
-          <div className={styles.chartStripes}>
+          {/* <div className={styles.chartStripes}>
             <div className={clsx(styles.stripe)}></div>
             <div className={styles.stripe}></div>
             <div className={styles.stripe}></div>
@@ -51,16 +50,37 @@ export const Chart: React.FC<Props> = ({ amount }) => {
             <div className={styles.stripe}></div>
             <div className={styles.stripe}></div>
             <div className={styles.stripe}></div>
-          </div>
+          </div> */}
 
-          <div className={styles.days}>
-            <span>01</span>
-            <span>05</span>
-            <span>10</span>
-            <span>15</span>
-            <span>20</span>
-            <span>25</span>
-            <span>30</span>
+          {/* <div className={styles.dates}> */}
+          {/* Month */}
+          {/* {Object.entries(utils.finance.periods[0].graph.month)
+              .filter((day, index) => (index + 1) % 5 === 0 || index === 0)
+              .map(([day, value]) => (
+                <span key={day}><div className={styles.stripe}></div>{day < 10 ? `0${day}` : day}</span>
+              ))}
+          </div> */}
+
+          {/* Half-year */}
+          {/* {Object.entries(utils.finance.periods[0].graph.half_year).map(
+              ([month, value]) => (
+                <span key={month}>
+                  <div className={styles.stripeHalfYear}></div>
+                  {month}
+                </span>
+              )
+            )} */}
+
+          {/* Year */}
+          <div className={styles.datesYear}>
+            {Object.entries(utils.finance.periods[0].graph.year).map(
+              ([month, value]) => (
+                <span key={month}>
+                  <div className={styles.stripeYearActive}></div>
+                  {month}
+                </span>
+              )
+            )}
           </div>
         </div>
       </div>

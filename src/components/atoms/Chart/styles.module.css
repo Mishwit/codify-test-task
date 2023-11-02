@@ -12,13 +12,14 @@
 .chartAmount {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  justify-content: center;
+  justify-content: flex-start;
+  gap: 26px;
 }
 
 .chartGraph {
   display: flex;
   align-items: flex-end;
+  margin-left: 32px;
 }
 
 .chartStripes {
@@ -40,7 +41,37 @@
   width: 16px;
 }
 
-.days {
+.stripeHalfYear {
+  height: 1px;
+  width: 16px;
+  margin-bottom: 14px;
+  margin-left: 18px;
+  background-color: #000aff;
+}
+
+.stripeYear {
+  height: 1px;
+  width: 16px;
+  margin-bottom: 14px;
+  margin-left: 18px;
+  background-color: #000aff;
+}
+
+.stripeYearActive {
+  width: 16px;
+  height: 220px;
+  margin-bottom: 14px;
+  margin-left: 11px;
+  background-color: #000aff;
+  border-radius: 5px;
+}
+
+.dates {
   display: flex;
   gap: 111px;
+}
+
+.datesYear {
+  display: flex;
+  gap: 27px;
 }

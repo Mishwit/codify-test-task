@@ -12,6 +12,7 @@ const options = [
 ];
 
 const amount = [10000, 5000, 2000, 1000, 500, 0];
+const formattedAmount = amount.map((number) => number.toLocaleString());
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
       <div className={styles.center}>
         <Select options={options} defaultOption={options[0]} />
 
-        <Chart amount={amount} />
+        <Chart amount={formattedAmount} />
       </div>
     </main>
   );
